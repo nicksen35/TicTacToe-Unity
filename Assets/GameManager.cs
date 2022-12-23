@@ -6,19 +6,9 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public Text[] spaceList;
-<<<<<<< HEAD
     
-    public string GetSide = "X";
-
-    public void SwitchSides() 
-    {
-        if (GetSide == "X")
-        {
-            GetSide = "0";
-=======
     private int moves;
     public string side;
-    
     void Start()
     {
         SetGameControllerReferenceForButtons();
@@ -36,32 +26,22 @@ public class GameManager : MonoBehaviour
 		
     }
 
-    
-    
-
     public void SwitchSides() 
     {
         if (side == "X")
         {
             side = "O";
->>>>>>> 00ee2f9 (Basic Logic)
         }
             
         else
-        {
-<<<<<<< HEAD
-            GetSide = "X";
-=======
+        {   
             side = "X";
->>>>>>> 00ee2f9 (Basic Logic)
         }
     }
 
     public void EndTurn() 
     {
-<<<<<<< HEAD
 
-=======
         moves++;
         if (spaceList[0].text == side && spaceList[1].text == side && spaceList[2].text == side)
         {
@@ -96,6 +76,5 @@ public class GameManager : MonoBehaviour
     public string GetSide()
     {   
         return side;
->>>>>>> 00ee2f9 (Basic Logic)
     }
 }
