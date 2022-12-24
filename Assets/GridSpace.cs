@@ -7,24 +7,19 @@ public class GridSpace : MonoBehaviour
     private static GameManager gm;
     public Button button;
     public Text buttontext;
+    //Calling all variables
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Start is called before the first frame update
-       public void SetControllerReference(GameManager manager)
+    public void SetControllerReference(GameManager manager)
     {
 	    gm = manager;
     }
-
+    //Set the controller reference to reference our game manager
     public void SpaceSet() 
     {
-        UnityEngine.Debug.Log("Hello"); 
         buttontext.text = gm.GetSide(); 
         button.interactable = false;
         gm.EndTurn();
     }
+    //Set the space, get the side, then end the turn and make the button uninteractable
  
 }
